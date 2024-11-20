@@ -1,0 +1,184 @@
+/* 
+Author: Adam Sapit
+Date: 11/19/2024
+Assignment Title: Paths To Success
+*/
+  
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+
+/* CSS RESET */ 
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+
+:root{
+    --kavoon: 'Kavoon', normal;
+    --inter: 'Inter', italic;
+    --Teal :#4CA7C0;
+    --purple: #484FB7;
+    --lavender: #6B8FE7;
+    --yellow: #E9BB57; 
+    --pink:#D9526F;
+    --dark-gray:#1E1E1E; 
+    --white:#ffffff; 
+}
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+
+html{
+    background-color: var(--purple);
+    font-family: var(--inter);
+}
+
+h1, h2{
+    font-family: var(--kavoon);
+    color: var(--white);
+}
+
+h1{
+    font-size: 3em;
+}
+
+.sticky{
+    font-size: 1.5em;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 1rem;
+    background-color: var(--yellow);
+    border-radius: 0 0 25px 25px;
+    text-decoration: none;
+}
+
+.sticky a{
+    text-decoration: none;
+    color: black;
+    font-family: var(--inter);
+    font-weight: bold;
+    font-style: italic;
+}
+
+header{
+    text-align: center;
+}
+
+header h1{
+    border-radius: 0 0 25px 25px;
+    background-color: var(--lavender);
+    padding: 3rem 2rem 2rem;
+    z-index: 5;
+}
+
+header p{
+
+    text-overflow: "";
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--pink);
+    position: relative;
+    top: -10px;
+    border-radius: 0 0 25px 25px;
+    text-align: center;
+    padding: 1rem 7rem 1rem;
+    z-index: -1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    overflow: hidden;
+
+}
+
+
+nav ul{
+    display: none;
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--yellow);
+}
+
+h4{
+    font-size: 1.15em;
+}
+
+header p{
+    color: var(--white);
+}
+
+section{
+    padding: 0.5rem;
+}
+
+section:nth-child(even){
+    background-color: var(--pink);
+}
+
+#why{
+
+}
+
+footer{
+    background-color: var(--lavender);
+}
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+
