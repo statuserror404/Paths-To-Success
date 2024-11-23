@@ -75,6 +75,8 @@ table {
 
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 
+
+
 html{
     background-color: var(--purple);
     font-family: var(--inter);
@@ -108,6 +110,12 @@ h1{
     font-style: italic;
 }
 
+.sticky a:hover{
+
+    color: var(--white);
+
+}
+
 header{
     text-align: center;
 }
@@ -122,7 +130,7 @@ header h1{
 }
 
 header p{
-    text-overflow: "";
+    text-overflow: ellipsis "";
     overflow: hidden;
     white-space: nowrap;
     background-color: var(--pink);
@@ -139,6 +147,10 @@ header p{
 
 nav ul{
     display: none;
+}
+
+nav ul a:hover{
+    color:var(--white);
 }
 
 h2{
@@ -167,7 +179,7 @@ section:nth-child(even){
     background-color: var(--pink);
 }
 
-#services div{
+.container1 div, .container2 div, .container3 div, .container4 div{
     background-color: var(--white);
     margin: 1rem;
     border-radius: 10px;
@@ -193,7 +205,7 @@ section:nth-child(even){
 
 #why li{
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     margin: .5rem;
     border-radius: 15px;
     font-weight: bold;
@@ -215,13 +227,246 @@ section:nth-child(even){
     background-color: var(--white);
 }
 
-footer{
-    background-color: var(--lavender);
+
+
+
+#prices h3{
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    
 }
 
+
+
+#prices table, th, td{
+    margin: auto;
+    border: 2px solid var(--yellow);
+    width: 80%;
+    max-width: 300px;
+    padding: 1rem 0.7rem 1rem 0.7rem;
+
+}
+
+#prices table thead{
+    background-color: var(--yellow);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#prices table tbody{
+    background-color: var(--white);
+    text-align: left;
+}
+
+#prices th{
+    font-size: 0.9rem;
+}
+
+#prices table tbody th + th{
+    text-align: center;
+
+}
+
+
+#step{
+    padding: 1rem;
+}
+
+#step p{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+.button{
+    padding: 1.5rem;
+    margin:auto;
+    width: 80%;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px black;
+
+}
+
+.button a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+footer{
+    background-color: var(--lavender);
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+    margin-bottom: 2rem;
+}
+
+footer p, footer a{
+    display: inline-block;
+
+    padding: 2rem 2rem;
+    color: var(--white);
+}
+
+
+
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 620px){
+
+    .container1, .container2{
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container1 div:last-of-type{
+        grid-column: 1 / 3;
+    }
+
+    #why ul{
+        display: flex;
+        
+        gap: 1rem;
+    }
+
+    
+    #why ul li{
+        margin:auto;
+        padding: 5vh 3vw;
+
+        
+    }
+
+
+    .prcTbl {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+
+    }
+
+    #prices table{
+
+        width: 85%;
+
+    
+    }
+
+    #step div{
+        display: flex;
+    }
+
+    #step p{
+        width: 70%;
+    }
+
+    .button{
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .button a{
+        margin: auto;
+    }
+
+
+    footer p, footer a{
+
+        padding: 2rem 10%;
+
+    }
+    
+}
+
 
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 950px){
 
+    .sticky, .sticky a{
+        display: none;
+    }
+
+    nav ul{
+        
+        display: flex;
+        font-size: .8em;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        padding: 1rem;
+        background-color: var(--yellow);
+        border-radius: 0 0 25px 25px;
+        text-decoration: none;
+        white-space: nowrap;
+        width: 600px;
+        
+    }
+
+    nav ul a{
+        text-decoration: none;
+        color: black;
+        font-family: var(--inter);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-left: 1.7rem;
+        margin-right: 1.7rem;
+    }
+
+    .boxes > div{
+        display: flex;
+    }
+
+    .container1, .container2, .container3, .container4{
+        display: block;
+    }
+
+    .one, .two, .three, .four{
+        margin-top: 0.5rem;
+
+        text-align: center;
+    }
+
+    .prcTbl {
+        display: flex;
+        
+    }
+
+    .tblgrp{
+        margin: auto;
+    }
+
+
+    .table1, .table2, .table3, .table4{
+        display: block;
+    }
+    #step p{
+        width: 50%;
+        margin-right: 4rem;
+    }
+
+    .button{
+        margin-top: 1rem;
+        margin-left: 6rem;
+        margin-right: 5rem;
+
+    }
+
+}
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1280px){
 
+    main, header{
+        margin: auto;
+        max-width: 1280px;
+    }
+
+    #prices table{
+
+        width: 100%;
+
+    
+    }
+
+}
